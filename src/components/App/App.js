@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import './App.css';
-
 import Show from '../Show';
 
 import bigBangImage from './assets/bigBang.jpg';
