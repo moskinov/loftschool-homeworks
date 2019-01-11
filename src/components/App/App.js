@@ -6,27 +6,19 @@ import LoginForm from '../LoginForm';
 import Congratulations from '../Congratulations';
 import { AuthProvider, AuthConsumer } from '../../contexts/Auth';
 
-class App extends PureComponent {
-  render() {
-    return (
-      <AuthProvider>
-        <Layout header={Header} footer={Footer}>
-          <AuthConsumer>
-            {({ isAuthorized, authorize, authorizeError }) =>
-              isAuthorized ? (
-                <Congratulations />
-              ) : (
-                <LoginForm
-                  authorize={authorize}
-                  authorizeError={authorizeError}
-                />
-              )
-            }
-          </AuthConsumer>
-        </Layout>
-      </AuthProvider>
-    );
-  }
-}
+export default class App extends PureComponent {
+	render() {
+		return (
+			<AuthProvider>
+				<Layout header={Header} footer={Footer}>
+					<AuthConsumer>
+						{({ isAuthorized, authorize, authorizeError }) =>
 
-export default App;
+								isAuthorized ? <Congratulations /> :
+								<LoginForm authorize={authorize} authorizeError={authorizeError} />}
+					</AuthConsumer>
+				</Layout>
+			</AuthProvider>
+		);
+	}
+}
