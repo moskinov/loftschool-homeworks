@@ -35,7 +35,7 @@ class AuthProvider extends PureComponent {
 
 	getProviderValue = () => ({
 		email: this.state.email,
-		isAuthorized: this.state.auth,
+		isAuthorized: this.state.isAuthorized,
 		authorizeError: this.state.authorizeError,
 		authorize: this.authorize,
 		logout: this.logout
