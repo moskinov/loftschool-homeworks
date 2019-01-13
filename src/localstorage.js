@@ -1,16 +1,16 @@
 function load(localStorageKey) {
-  const stringData = window.localStorage.getItem(localStorageKey);
-  let data = null;
+	const stringData = window.localStorage.getItem(localStorageKey);
+	let data = null;
 
-  try {
-    data = JSON.parse(stringData);
-  } catch (e) {}
+	try {
+		data = JSON.parse(stringData);
+	} catch (e) {}
 
-  return data;
+	return data;
 }
 
 function save(localStorageKey, data) {
-  window.localStorage.setItem(localStorageKey, JSON.stringify(data));
+	window.localStorage.setItem(localStorageKey, JSON.stringify(data));
 }
 
 export { load, save };

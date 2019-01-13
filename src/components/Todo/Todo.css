@@ -38,6 +38,19 @@
   padding-right: 30px;
 }
 
+.todo-item__empty {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
+}
+
+.todo-item__text_done {
+  text-decoration: line-through;
+  color: gray;
+}
+
 .todo-item__flag {
   position: absolute;
   right: 10px;
