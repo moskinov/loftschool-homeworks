@@ -8,6 +8,11 @@
   padding-bottom: 20px;
 }
 
+.searchFetching {
+  text-align: center;
+  color: greenyellow;
+}
+
 .buttonWrapper {
   padding-left: 10px;
 }
@@ -21,4 +26,8 @@
 
 .input {
   font-size: 16px;
+}
+
+.error {
+  color: red;
 }

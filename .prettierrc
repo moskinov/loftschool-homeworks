@@ -1,10 +1,9 @@
 printWidth: 80
-proseWrap: always
 singleQuote: true
 semi: true
 bracketSpacing: true
 parser: babylon
-trailingComma: none
+trailingComma: 'all'
 overrides:
 - files:
   - '*.ts'
