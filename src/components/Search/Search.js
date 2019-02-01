@@ -53,6 +53,6 @@ class Search extends PureComponent {
 }
 
 export default connect(
-  undefined,
+  null,
   { fetchUserRequest, fetchFollowersRequest }
 )(Search);
