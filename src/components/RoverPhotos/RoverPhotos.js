@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
+import LazyLoad from 'react-lazyload';
 
 const styles = {
   root: {
@@ -13,12 +14,20 @@ const styles = {
   title: {
     fontSize: 20,
     fontWeight: 600
+  },
+  image: {
+    left: '50%',
+    height: '100%',
+    position: 'relative',
+    transform: 'translateX(-50%)'
   }
 };
 
 class RoverPhotos extends PureComponent {
   render() {
     const { classes, photos, name } = this.props;
+
+    console.log(classes)
     return (
       <Paper className={classes.root}>
         <Typography className={classes.title} component="h2">{name}</Typography>
@@ -28,7 +37,9 @@ class RoverPhotos extends PureComponent {
               key={photo.id}
               cols={Math.round(Math.random() * 3 - 0.5)}
             >
-              <img src={photo.img_src} alt={photo.camera.full_name} />
+            <LazyLoad>
+            <img className={classes.image} src={photo.img_src} alt={photo.camera.full_name} />
+            </LazyLoad>
             </GridListTile>
           ))}
         </GridList>
