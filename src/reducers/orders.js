@@ -22,7 +22,7 @@ export default (state = [], action) => {
 				orderNext.position = 'conveyor_1';
 			} else if (orderNext.position !== 'conveyor_4') {
 				orderNext.position = `conveyor_${parseInt(orderNext.position.slice(-1)) + 1}`;
-			} else if (orderNext.ingredients.length === orderNext.recipe.length) {
+			} else if (orderNext.ingredients.length >= orderNext.recipe.length) {
 				orderNext.position = 'finish';
 			}
 			return state.map(
