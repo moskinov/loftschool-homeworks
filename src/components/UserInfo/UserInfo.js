@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import styles from './UserInfo.module.css';
-
 import { connect } from 'react-redux';
 
 class UserInfo extends PureComponent {

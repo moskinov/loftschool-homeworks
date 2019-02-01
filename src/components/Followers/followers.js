@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import styles from './followers.module.css';
-import {} from '../../modules/Followers';
 import { connect } from 'react-redux';
 import cx from 'classnames';
 
